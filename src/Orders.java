@@ -16,14 +16,13 @@ public class Orders {
 
         if(a.quantity<quantity){
             System.out.println("nie moge dodac do koszyka nie ma tylu pozycji");
-            return;
         }
 
-        Positions new_position = new Positions();  ///powstaje pusty obiekt klasy Position ktory dodajemy do zamoienia pozniej uzytkownik wypelnia;
-        new_position.quantity = quantity;   ////przypisanie ilosci ktora ktos chce dodac do nowego zamowienia ktroe utworzyl
-        a.quantity -= quantity;     //////pomniejszenie magazynu o wybrana przez usera ilosc
+        Positions new_position = new Positions();
+        new_position.quantity = quantity;
+        a.quantity -= quantity;
 
-        new_position.set = a.set;  ////////przypisanie wartosci setu do naszej pozycji cena+nazwa;
+        new_position.set = a.set;
 
         setList.add(new_position);
         System.out.println("dodano do zamowienia");
